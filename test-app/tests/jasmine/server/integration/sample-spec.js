@@ -17,4 +17,11 @@ describe('Server Integration', function () {
       expect(mock).toBeDefined()
     });
   });
+
+  describe('should support testing asynchronous operations', function() {
+    it('should call done when finished', function(done) {
+      setTimeout(done, 6000);
+    })
+  })
+
 });
